@@ -9,3 +9,18 @@
 
 // If you want to add something do it here
 @import "custom";
+
+@import "~@coreui/coreui/scss/bootstrap";
+
+$theme-colors: map-remove($theme-colors, "info", "light", "dark");
+
+// Optional
+@import "~@coreui/coreui/scss/root";
+@import "~@coreui/coreui/scss/reboot";
+@import "~@coreui/coreui/scss/type";
+
+
+.nav > li > a:focus, .nav > li > a:hover {
+  text-decoration: none;
+  background-color: #5BC3D5 !important;
+}

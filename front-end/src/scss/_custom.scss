@@ -1,1 +1,86 @@
 // Here you can add other styles
+
+
+@font-face {
+  font-family: 'GillSans';
+  src: url("../fonts/GillSans.ttf");
+}
+
+@font-face {
+  font-family: 'BAHNSCHRIFT';
+  src: url("../fonts/BAHNSCHRIFT.TTF");
+}
+
+a,
+p,
+span,
+li,
+input {
+  font-family: 'GillSans' !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'BAHNSCHRIFT' !important;
+}
+
+.c-sidebar .c-sidebar-brand {
+  text-decoration: none;
+}
+
+a.c-sidebar-brand.d-md-down-none.d-flex.flex-column.justify-content-center.align-items-center.pb-4,
+button.c-sidebar-minimizer.c-d-md-down-none {
+  background: #1E2A3A !important;
+}
+
+.c-sidebar-minimized img,
+.c-sidebar-minimized h4,
+.c-sidebar-minimized p,
+.c-sidebar-minimized .icons {
+  display: none !important;
+}
+
+.c-sidebar-nav {
+  background-color: #1E2A3A !important;
+}
+
+ul.c-sidebar-nav.h-100.ps {
+  background-color: #1E2A3A !important;
+}
+
+.c-sidebar {
+  color: #fff;
+  background: #1E2A3A !important;
+}
+
+.c-sidebar-nav-item:hover,
+c-sidebar-nav-item a:hover {
+  background: #5BC3D5 !important;
+}
+
+hr {
+  background-color: #707070;
+  height: 1px;
+  width: 80%;
+  border-radius: 5px;
+  border: transparent;
+}
+
+.icons .fab {
+  font-size: 21px;
+  background-color: #5BC3D5;
+  border-radius: 100%;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  max-height: 40px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
