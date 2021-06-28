@@ -1,39 +1,41 @@
 import React from "react";
 import CIcon from "@coreui/icons-react";
+import { cilDevices } from "@coreui/icons";
 
 const _nav = [
   {
     _tag: "CSidebarNavItem",
-    name: "Dashboard",
+    name: "About Me",
     to: "/dashboard",
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon" />,
+    icon: "cil-user",
   },
 
   {
     _tag: "CSidebarNavItem",
-    name: "Colors",
-    to: "/theme/colors",
-    icon: "cil-drop",
+    name: "Portfolio",
+    to: "/Portfolio",
+    icon: "cil-code",
+    className: "kek",
   },
   {
     _tag: "CSidebarNavItem",
-    name: "Typography",
-    to: "/theme/typography",
-    icon: "cil-pencil",
+    name: "Resume",
+    to: "/resume",
+    icon: "cil-notes",
   },
 
   {
     _tag: "CSidebarNavItem",
-    name: "Charts",
+    name: "Certifications",
     to: "/charts",
-    icon: "cil-chart-pie",
+    icon: "cil-list-rich",
   },
 
   {
     _tag: "CSidebarNavItem",
-    name: "Widgets",
+    name: "Contact",
     to: "/widgets",
-    icon: "cil-calculator",
+    icon: "cil-envelope-closed",
   },
   {
     _tag: "CSidebarNavDivider",

@@ -32,7 +32,7 @@ const TheSidebar = () => {
       onShowChange={(val) => dispatch({ type: "set", sidebarShow: val })}
     >
       <CSidebarBrand
-        className="d-md-down-none d-flex flex-column justify-content-center align-items-center pb-4"
+        className=" d-flex flex-column justify-content-center align-items-center pb-4 "
         to="/"
       >
         <h4 className="mt-4 mb-2">Cezar Trentin</h4>
@@ -44,10 +44,21 @@ const TheSidebar = () => {
       </CSidebarBrand>
       <div className="container d-flex align-items-center justify-content-center">
         <div className="icons d-flex align-items-center justify-content-around">
-          <i class="fab fa-linkedin-in"></i>
-          <i class="fab fa-github-alt"></i>
-          <i class="fab fa-stack-overflow"></i>
-          <i class="fab fa-codepen"></i>
+          <a target="_blank" href="https://www.linkedin.com/in/lucas-cezar-trentin-7a5980a8/">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a target="_blank" href="https://github.com/czarist/">
+            <i class="fab fa-github-alt"></i>
+          </a>
+          <a target="_blank" href="https://stackoverflow.com/users/15217778/cezar-trentin">
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+          <a target="_blank" href="https://codepen.io/czarist">
+            <i class="fab fa-codepen"></i>
+          </a>
+          <a target="_blank" href="https://www.behance.net/lucastrentin2">
+            <i class="fab fa-behance"></i>
+          </a>
         </div>
       </div>
 
@@ -63,6 +74,14 @@ const TheSidebar = () => {
           }}
         />
       </CSidebarNav>
+      <hr></hr>
+      <div className="text-center d-flex w-100 justify-content-center flex-column align-items-center">
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=5551986593952&text=" className="linkbutton">
+          <i class="fab fa-whatsapp mr-2"></i>
+          Hire me
+        </a>
+        <p>© {new Date().getFullYear()} All Rights Reserved</p>
+      </div>
       <CSidebarMinimizer className="c-d-md-down-none" />
     </CSidebar>
   );
