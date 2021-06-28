@@ -34,7 +34,7 @@ const _nav = [
   {
     _tag: "CSidebarNavItem",
     name: "Contact",
-    to: "/widgets",
+    to: "/contact",
     icon: "cil-envelope-closed",
   },
   {
