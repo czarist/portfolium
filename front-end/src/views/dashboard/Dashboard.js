@@ -15,7 +15,6 @@ import {
 import CIcon from "@coreui/icons-react";
 import ReactTooltip from "react-tooltip";
 
-import MainChartExample from "../charts/MainChartExample.js";
 
 const WidgetsDropdown = lazy(() => import("../widgets/WidgetsDropdown.js"));
 const WidgetsBrand = lazy(() => import("../widgets/WidgetsBrand.js"));

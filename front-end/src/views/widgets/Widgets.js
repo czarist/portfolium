@@ -14,8 +14,8 @@ import {
 import WidgetsBrand from './WidgetsBrand'
 import WidgetsDropdown from './WidgetsDropdown'
 
-import ChartLineSimple from '../charts/ChartLineSimple'
-import ChartBarSimple from '../charts/ChartBarSimple'
+import ChartLineSimple from '../Certifications/ChartLineSimple'
+import ChartBarSimple from '../Certifications/ChartBarSimple'
 
 import CIcon from '@coreui/icons-react'
 
@@ -94,7 +94,7 @@ const Widgets = () => {
           <CWidgetIcon text="income" header="$1.999,50" color="danger" iconPadding={false}>
             <CIcon width={24} name="cil-bell"/>
           </CWidgetIcon>
-            
+
         </CCol>
         <CCol xs="12" sm="6" lg="4">
           <CWidgetIcon text="income" header="$1.999,50" color="primary" iconPadding={false}>
@@ -107,17 +107,17 @@ const Widgets = () => {
           </CWidgetIcon>
         </CCol>
         <CCol xs="12" sm="6" lg="4">
-          <CWidgetIcon 
-            text="income" 
-            header="$1.999,50" 
-            color="warning" 
+          <CWidgetIcon
+            text="income"
+            header="$1.999,50"
+            color="warning"
             iconPadding={false}
             footerSlot={
               <CCardFooter className="card-footer px-3 py-2">
                 <CLink
                   className="font-weight-bold font-xs btn-block text-muted"
                   href="https://coreui.io/"
-                  rel="noopener norefferer" 
+                  rel="noopener norefferer"
                   target="_blank"
                 >
                   View more

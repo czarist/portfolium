@@ -15,7 +15,7 @@ import {
 } from '@coreui/react-chartjs'
 import { DocsLink } from 'src/reusable'
 
-const Charts = () => {
+const Certifications = () => {
 
   return (
     <CCardGroup columns className = "cols-2" >
@@ -212,4 +212,4 @@ const Charts = () => {
   )
 }
 
-export default Charts
+export default Certifications

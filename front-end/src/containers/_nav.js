@@ -27,7 +27,7 @@ const _nav = [
   {
     _tag: "CSidebarNavItem",
     name: "Certifications",
-    to: "/charts",
+    to: "/Certifications",
     icon: "cil-list-rich",
   },
 
