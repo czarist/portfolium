@@ -45,19 +45,19 @@ const TheSidebar = () => {
       <div className="container d-flex align-items-center justify-content-center">
         <div className="icons d-flex align-items-center justify-content-around">
           <a target="_blank" href="https://www.linkedin.com/in/lucas-cezar-trentin-7a5980a8/">
-            <i class="fab fa-linkedin-in"></i>
+            <i className="fab fa-linkedin-in"></i>
           </a>
           <a target="_blank" href="https://github.com/czarist/">
-            <i class="fab fa-github-alt"></i>
+            <i className="fab fa-github-alt"></i>
           </a>
           <a target="_blank" href="https://stackoverflow.com/users/15217778/cezar-trentin">
-            <i class="fab fa-stack-overflow"></i>
+            <i className="fab fa-stack-overflow"></i>
           </a>
           <a target="_blank" href="https://codepen.io/czarist">
-            <i class="fab fa-codepen"></i>
+            <i className="fab fa-codepen"></i>
           </a>
           <a target="_blank" href="https://www.behance.net/lucastrentin2">
-            <i class="fab fa-behance"></i>
+            <i className="fab fa-behance"></i>
           </a>
         </div>
       </div>
@@ -77,7 +77,7 @@ const TheSidebar = () => {
       <hr></hr>
       <div className="text-center d-flex w-100 justify-content-center flex-column align-items-center">
         <a target="_blank" href="https://api.whatsapp.com/send?phone=5551986593952&text=" className="linkbutton">
-          <i class="fab fa-whatsapp mr-2"></i>
+          <i className="fab fa-whatsapp mr-2"></i>
           Hire me
         </a>
         <p>© {new Date().getFullYear()} All Rights Reserved</p>

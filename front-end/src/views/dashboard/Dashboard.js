@@ -47,11 +47,11 @@ const Dashboard = () => {
               </p>
               <div className="d-flex align-items-center justify-content-start mb-5">
                 <a className="internal-link mr-4" href="/#/Portfolio">
-                  <i class="fas fa-laptop-code mr-2"></i>
+                  <i className="fas fa-laptop-code mr-2"></i>
                   View Portfolio
                 </a>
                 <a className="internal-link mr-4" href="/#/resume">
-                  <i class="fas fa-file-alt mr-2"></i>
+                  <i className="fas fa-file-alt mr-2"></i>
                   View Resume
                 </a>
               </div>
