@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_tecnologias_tecnologias",
+  "info": {
+    "name": "tecnologias",
+    "icon": "atom"
+  },
+  "options": {},
+  "attributes": {
+    "Tecnologia": {
+      "type": "string"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

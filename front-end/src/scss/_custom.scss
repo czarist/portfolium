@@ -133,6 +133,10 @@ a.linkbutton:hover {
   color: white !important;
 }
 
+.case-left {
+  left: 14px;
+}
+
 .c-body {
   background-color: #111821;
 }
@@ -194,6 +198,15 @@ hr {
   margin-left: 5px;
   margin-right: 5px;
   font-size: 18px;
+}
+
+.bg-case {
+  background-color: #1E2A3A;
+  border-color: transparent !important;
+}
+
+.case-body {
+  height: 200px;
 }
 
 @media only screen and (max-width: 1024px) {
