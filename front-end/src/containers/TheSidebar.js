@@ -12,13 +12,6 @@ import {
   CSidebarNavItem,
 } from "@coreui/react";
 
-import CIcon from "@coreui/icons-react";
-
-import ReactDOM from "react-dom";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons";
-
 // sidebar nav config
 import navigation from "./_nav";
 
@@ -44,19 +37,31 @@ const TheSidebar = () => {
       </CSidebarBrand>
       <div className="container d-flex align-items-center justify-content-center">
         <div className="icons d-flex align-items-center justify-content-around">
-          <a target="_blank" href="https://www.linkedin.com/in/lucas-cezar-trentin-7a5980a8/">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/lucas-cezar-trentin-7a5980a8/"
+          >
             <i className="fab fa-linkedin-in"></i>
           </a>
-          <a target="_blank" href="https://github.com/czarist/">
+          <a rel="noreferrer" href="https://github.com/czarist/">
             <i className="fab fa-github-alt"></i>
           </a>
-          <a target="_blank" href="https://stackoverflow.com/users/15217778/cezar-trentin">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://stackoverflow.com/users/15217778/cezar-trentin"
+          >
             <i className="fab fa-stack-overflow"></i>
           </a>
-          <a target="_blank" href="https://codepen.io/czarist">
+          <a rel="noreferrer" target="_blank" href="https://codepen.io/czarist">
             <i className="fab fa-codepen"></i>
           </a>
-          <a target="_blank" href="https://www.behance.net/lucastrentin2">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.behance.net/lucastrentin2"
+          >
             <i className="fab fa-behance"></i>
           </a>
         </div>
@@ -76,7 +81,11 @@ const TheSidebar = () => {
       </CSidebarNav>
       <hr></hr>
       <div className="text-center d-flex w-100 justify-content-center flex-column align-items-center">
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=5551986593952&text=" className="linkbutton">
+        <a
+          rel="noreferrer"
+          href="https://api.whatsapp.com/send?phone=5551986593952&text="
+          className="linkbutton"
+        >
           <i className="fab fa-whatsapp mr-2"></i>
           Hire me
         </a>

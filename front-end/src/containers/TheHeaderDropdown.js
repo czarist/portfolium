@@ -1,13 +1,5 @@
-import React from 'react'
-import {
-  CBadge,
-  CDropdown,
-  CDropdownItem,
-  CDropdownMenu,
-  CDropdownToggle,
-  CImg
-} from '@coreui/react'
-import CIcon from '@coreui/icons-react'
+import React from "react";
+import { CDropdown } from "@coreui/react";
 
 const TheHeaderDropdown = () => {
   return (
@@ -15,11 +7,8 @@ const TheHeaderDropdown = () => {
       inNav
       className="c-header-nav-items mx-2"
       direction="down"
-    >
+    ></CDropdown>
+  );
+};
 
-
-    </CDropdown>
-  )
-}
-
-export default TheHeaderDropdown
+export default TheHeaderDropdown;

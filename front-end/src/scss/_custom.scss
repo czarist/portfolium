@@ -62,7 +62,8 @@ a.extra-link:hover {
 }
 
 .icon {
-  width: 21%;
+  width: 57px;
+  height: 57px;
   cursor: pointer;
 }
 
@@ -210,6 +211,10 @@ hr {
 }
 
 @media only screen and (max-width: 1024px) {
+  .fx-center-1024 {
+    justify-content: center !important;
+  }
+
   .w100-1024 {
     width: 100% !important;
     max-width: 100% !important;

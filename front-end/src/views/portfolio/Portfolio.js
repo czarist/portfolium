@@ -1,15 +1,5 @@
-import React, { useEffect, useState, createRef } from "react";
-import classNames from "classnames";
-import {
-  CCard,
-  CCardBody,
-  CCardGroup,
-  CCardHeader,
-  CRow,
-  CCol,
-} from "@coreui/react";
-import { rgbToHex } from "@coreui/utils";
-import { DocsLink } from "src/reusable";
+import React from "react";
+import { CCard, CCardBody, CCardGroup, CRow, CCol } from "@coreui/react";
 
 const Portfolio = () => {
   return (

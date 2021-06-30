@@ -1,23 +1,9 @@
-import React, { lazy } from "react";
-import {
-  CBadge,
-  CButton,
-  CButtonGroup,
-  CCard,
-  CCardBody,
-  CCardFooter,
-  CCardHeader,
-  CCol,
-  CProgress,
-  CRow,
-  CCallout,
-} from "@coreui/react";
-import CIcon from "@coreui/icons-react";
+import React from "react";
+import { CCard, CCardBody, CCol, CRow } from "@coreui/react";
 import ReactTooltip from "react-tooltip";
-import axios from "axios";
+// import axios from "axios";
 
 class Dashboard extends React.Component {
-  // State of your application
   state = {
     Tecnologias: [],
     error: null,
@@ -25,15 +11,44 @@ class Dashboard extends React.Component {
 
   // Fetch your restaurants immediately after the component is mounted
   componentDidMount = async () => {
+    // Parses the JSON returned by a network request
+    const parseJSON = (resp) => (resp.json ? resp.json() : resp);
+
+    // Checks if a network request came back fine, and throws an error if not
+    const checkStatus = (resp) => {
+      if (resp.status >= 200 && resp.status < 300) {
+        return resp;
+      }
+      return parseJSON(resp).then((resp) => {
+        throw resp;
+      });
+    };
+    const headers = {
+      "Content-Type": "application/json",
+    };
+
     try {
-      const response = await axios.get("http://localhost:1337/Tecnologias");
-      this.setState({ Tecnologias: response.data });
+      const Tecnologias = await fetch("http://localhost:1337/Tecnologias", {
+        method: "GET",
+        headers: headers,
+      })
+        .then(checkStatus)
+        .then(parseJSON);
+      this.setState({ Tecnologias });
     } catch (error) {
       this.setState({ error });
     }
   };
+
   render() {
-    return (
+    const { error, Tecnologias } = this.state;
+
+    // Print errors if any
+    if (error) {
+      return <div>An error occured: {error.message}</div>;
+    }
+
+    return this.state.Tecnologias ? (
       <>
         <CCard className="bg-transparent">
           <CCardBody className="bg-transparent">
@@ -105,201 +120,37 @@ class Dashboard extends React.Component {
                 </p>
               </CCol>
             </CRow>
+
             <div className="d-flex flex-wrap justify-content-between w-100">
-              <div className="icons-content d-flex flex-wrap mt-5 w-25 w100-1024">
-                <ReactTooltip id="jquery" place="top" effect="solid">
-                  jquery
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://icons-for-free.com/iconfiles/png/512/jquery+icon-1320185152994214115.png"
-                  data-tip
-                  data-for="jquery"
-                />
-                <ReactTooltip id="Typescript" place="top" effect="solid">
-                  Typescript
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
-                  data-tip
-                  data-for="Typescript"
-                />
-                <ReactTooltip id="ES6" place="top" effect="solid">
-                  ES6
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0jwQ-NerBf8yIG9z52jit-F1MyLZ4VB5e6XQaGLnTSMQe-jotURbdlTxy9iH68SHPOM&usqp=CAU"
-                  data-tip
-                  data-for="ES6"
-                />
-                <ReactTooltip id="VanillaJS" place="top" effect="solid">
-                  VanillaJS
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png"
-                  data-tip
-                  data-for="VanillaJS"
-                />
-              </div>
-              <div className="icons-content d-flex flex-wrap mt-5 w-25 w100-1024">
-                <ReactTooltip id="jquery" place="top" effect="solid">
-                  jquery
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://icons-for-free.com/iconfiles/png/512/jquery+icon-1320185152994214115.png"
-                  data-tip
-                  data-for="jquery"
-                />
-                <ReactTooltip id="Typescript" place="top" effect="solid">
-                  Typescript
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
-                  data-tip
-                  data-for="Typescript"
-                />
-                <ReactTooltip id="ES6" place="top" effect="solid">
-                  ES6
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0jwQ-NerBf8yIG9z52jit-F1MyLZ4VB5e6XQaGLnTSMQe-jotURbdlTxy9iH68SHPOM&usqp=CAU"
-                  data-tip
-                  data-for="ES6"
-                />
-                <ReactTooltip id="VanillaJS" place="top" effect="solid">
-                  VanillaJS
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png"
-                  data-tip
-                  data-for="VanillaJS"
-                />
-              </div>
-              <div className="icons-content d-flex flex-wrap mt-5 w-25 w100-1024">
-                <ReactTooltip id="jquery" place="top" effect="solid">
-                  jquery
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://icons-for-free.com/iconfiles/png/512/jquery+icon-1320185152994214115.png"
-                  data-tip
-                  data-for="jquery"
-                />
-                <ReactTooltip id="Typescript" place="top" effect="solid">
-                  Typescript
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
-                  data-tip
-                  data-for="Typescript"
-                />
-                <ReactTooltip id="ES6" place="top" effect="solid">
-                  ES6
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0jwQ-NerBf8yIG9z52jit-F1MyLZ4VB5e6XQaGLnTSMQe-jotURbdlTxy9iH68SHPOM&usqp=CAU"
-                  data-tip
-                  data-for="ES6"
-                />
-                <ReactTooltip id="VanillaJS" place="top" effect="solid">
-                  VanillaJS
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png"
-                  data-tip
-                  data-for="VanillaJS"
-                />
-              </div>
-              <div className="icons-content d-flex flex-wrap mt-5 w-25 w100-1024">
-                <ReactTooltip id="jquery" place="top" effect="solid">
-                  jquery
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://icons-for-free.com/iconfiles/png/512/jquery+icon-1320185152994214115.png"
-                  data-tip
-                  data-for="jquery"
-                />
-                <ReactTooltip id="Typescript" place="top" effect="solid">
-                  Typescript
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
-                  data-tip
-                  data-for="Typescript"
-                />
-                <ReactTooltip id="ES6" place="top" effect="solid">
-                  ES6
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0jwQ-NerBf8yIG9z52jit-F1MyLZ4VB5e6XQaGLnTSMQe-jotURbdlTxy9iH68SHPOM&usqp=CAU"
-                  data-tip
-                  data-for="ES6"
-                />
-                <ReactTooltip id="VanillaJS" place="top" effect="solid">
-                  VanillaJS
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png"
-                  data-tip
-                  data-for="VanillaJS"
-                />
-              </div>
-              <div className="icons-content d-flex flex-wrap mt-5 w-25 w100-1024">
-                <ReactTooltip id="jquery" place="top" effect="solid">
-                  jquery
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://icons-for-free.com/iconfiles/png/512/jquery+icon-1320185152994214115.png"
-                  data-tip
-                  data-for="jquery"
-                />
-                <ReactTooltip id="Typescript" place="top" effect="solid">
-                  Typescript
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
-                  data-tip
-                  data-for="Typescript"
-                />
-                <ReactTooltip id="ES6" place="top" effect="solid">
-                  ES6
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0jwQ-NerBf8yIG9z52jit-F1MyLZ4VB5e6XQaGLnTSMQe-jotURbdlTxy9iH68SHPOM&usqp=CAU"
-                  data-tip
-                  data-for="ES6"
-                />
-                <ReactTooltip id="VanillaJS" place="top" effect="solid">
-                  VanillaJS
-                </ReactTooltip>
-                <img
-                  className="icon mr-2 mt-2"
-                  src="https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png"
-                  data-tip
-                  data-for="VanillaJS"
-                />
-              </div>
+              {" "}
+              {this.state.Tecnologias.map((tecnologia) => (
+                <div
+                  key={tecnologia.id}
+                  className="icons-content d-flex flex-wrap mt-5 w-25 w100-1024 fx-center-1024 justify-content-start"
+                >
+                  {tecnologia.tecnologia &&
+                    tecnologia.tecnologia.map((tec2) => (
+                      <div key={tec2.id}>
+                        <ReactTooltip id={tec2.hash} place="top" effect="solid">
+                          {tec2.caption}
+                        </ReactTooltip>
+                        <img
+                          className="icon mr-2 mt-2"
+                          src={"http://localhost:1337" + tec2.url}
+                          data-tip
+                          data-for={tec2.hash}
+                          alt="{tec2.caption}"
+                        />
+                      </div>
+                    ))}
+                </div>
+              ))}
             </div>
           </CCardBody>
         </CCard>
       </>
+    ) : (
+      "carregando"
     );
   }
 }
