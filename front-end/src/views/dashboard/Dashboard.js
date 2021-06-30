@@ -121,7 +121,7 @@ class Dashboard extends React.Component {
               </CCol>
             </CRow>
 
-            <div className="d-flex flex-wrap justify-content-between w-100">
+            <div className="d-flex flex-wrap justify-content-start w-100">
               {" "}
               {this.state.Tecnologias.map((tecnologia) => (
                 <div

@@ -33,6 +33,21 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "Client": {
+      "type": "string"
+    },
+    "designer": {
+      "type": "richtext"
+    },
+    "link": {
+      "type": "richtext"
+    },
+    "Intermediary": {
+      "type": "richtext"
+    },
+    "hexa_fundo": {
+      "type": "string"
     }
   }
 }

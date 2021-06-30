@@ -61,9 +61,18 @@ a.extra-link:hover {
   transition: 0.5s;
 }
 
+.case-body a,
+.case-body a:hover {
+  color: #5BC3D5
+}
+
+img.logo-case {
+  max-width: 200px;
+}
+
 .icon {
-  width: 57px;
-  height: 57px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
 }
 
