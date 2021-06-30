@@ -143,8 +143,21 @@ a.linkbutton:hover {
   color: white !important;
 }
 
+
 .case-left {
   left: 14px;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  z-index: 0;
+}
+
+.filter-kek {
+  background-color: #1e2a3aa8;
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .c-body {
@@ -190,6 +203,8 @@ hr {
 .icons a {
   color: white !important;
 }
+
+
 
 .icons .fab {
   font-size: 21px;

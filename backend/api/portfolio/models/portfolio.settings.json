@@ -34,19 +34,25 @@
       "required": false,
       "pluginOptions": {}
     },
-    "Client": {
+    "hexa_fundo": {
       "type": "string"
     },
     "designer": {
-      "type": "richtext"
+      "type": "string"
+    },
+    "designer_link": {
+      "type": "string"
     },
     "link": {
-      "type": "richtext"
+      "type": "string"
     },
-    "Intermediary": {
-      "type": "richtext"
+    "link_link": {
+      "type": "string"
     },
-    "hexa_fundo": {
+    "intermediary": {
+      "type": "string"
+    },
+    "intermediary_link": {
       "type": "string"
     }
   }
