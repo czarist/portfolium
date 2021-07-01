@@ -1,7 +1,6 @@
 import React from "react";
 import { CCard, CCardBody, CCol, CRow } from "@coreui/react";
 import ReactTooltip from "react-tooltip";
-// import axios from "axios";
 
 class Dashboard extends React.Component {
   state = {
@@ -9,12 +8,9 @@ class Dashboard extends React.Component {
     error: null,
   };
 
-  // Fetch your restaurants immediately after the component is mounted
   componentDidMount = async () => {
-    // Parses the JSON returned by a network request
     const parseJSON = (resp) => (resp.json ? resp.json() : resp);
 
-    // Checks if a network request came back fine, and throws an error if not
     const checkStatus = (resp) => {
       if (resp.status >= 200 && resp.status < 300) {
         return resp;
@@ -43,7 +39,6 @@ class Dashboard extends React.Component {
   render() {
     const { error, Tecnologias } = this.state;
 
-    // Print errors if any
     if (error) {
       return <div>An error occured: {error.message}</div>;
     }

@@ -68,6 +68,7 @@ a.extra-link:hover {
 
 img.logo-case {
   max-width: 200px;
+  max-height: 155px;
 }
 
 .icon {
@@ -158,7 +159,14 @@ a.linkbutton:hover {
   z-index: 0;
   height: 100%;
   width: 100%;
+  transition: 0.5s;
 }
+
+.case-body:hover .filter-kek {
+  background-color: #1e2a3a4d;
+  transition: 0.5s;
+}
+
 
 .c-body {
   background-color: #111821;
