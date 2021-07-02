@@ -92,6 +92,15 @@ a.c-header-brand.mx-auto.d-lg-none.active {
   display: none !important;
 }
 
+#content-xp a,
+#startups a {
+  color: #5BC3D5;
+}
+
+.opacity-4 {
+  opacity: 0.4;
+}
+
 .blue-after::after {
   content: "";
   width: 6px;
@@ -168,6 +177,7 @@ a.linkbutton:hover {
 }
 
 
+
 .c-body {
   background-color: #111821;
 }
@@ -212,7 +222,13 @@ hr {
   color: white !important;
 }
 
+.bg-blue1 {
+  background-color: #1E2A3A !important;
+}
 
+.br-50 {
+  border-radius: 50px;
+}
 
 .icons .fab {
   font-size: 21px;
@@ -242,7 +258,37 @@ hr {
   height: 200px;
 }
 
+.content-idioms {
+  width: 40%;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+// mobile
+
 @media only screen and (max-width: 1024px) {
+  .content-idioms {
+    width: 100%;
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1pc;
+  }
+
+  .fx-cl-1024 {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
   .fx-center-1024 {
     justify-content: center !important;
   }

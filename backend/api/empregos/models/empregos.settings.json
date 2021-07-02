@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empregos",
+  "info": {
+    "name": "empregos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "funcao": {
+      "type": "string"
+    },
+    "empresa": {
+      "type": "string"
+    },
+    "link_empresa": {
+      "type": "string"
+    },
+    "descricao": {
+      "type": "richtext"
+    },
+    "descricao_en": {
+      "type": "richtext"
+    },
+    "data": {
+      "type": "string"
+    }
+  }
+}
