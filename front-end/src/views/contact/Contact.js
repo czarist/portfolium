@@ -56,32 +56,40 @@ class Contact extends React.Component {
           </div>
         </div>
         <hr></hr>
-        <div className="col-12 mt-5">
-          <form
-            id="contact-form"
-            onSubmit={this.handleSubmit.bind(this)}
-            method="POST"
-          >
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input type="text" className="form-control" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="exampleInputEmail1">Email address</label>
-              <input
-                type="email"
-                className="form-control"
-                aria-describedby="emailHelp"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea className="form-control" rows="5"></textarea>
-            </div>
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
-          </form>
+        <div className="d-flex w-100 align-items-center justify-content-center">
+          <div className="col-6 mt-5">
+            <form
+              id="contact-form"
+              onSubmit={this.handleSubmit.bind(this)}
+              method="POST"
+            >
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Name"
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="email"
+                  className="form-control"
+                  aria-describedby="emailHelp"
+                  placeholder="Email address"
+                />
+              </div>
+              <div className="form-group">
+                <textarea
+                  className="form-control"
+                  placeholder="Message"
+                  rows="5"
+                ></textarea>
+              </div>
+              <button type="submit" className="btn linkbutton w-100">
+                Send Now
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     );
