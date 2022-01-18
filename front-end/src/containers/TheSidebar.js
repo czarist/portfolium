@@ -31,7 +31,7 @@ const TheSidebar = () => {
         <h4 className="mt-4 mb-2">Cezar Trentin</h4>
         <img src={"avatars/perfil.png"} alt="Logo" />
         <p className="mt-2 mb-2 text-center text-white pl-2 pr-2">
-          Hi, my name is Cezar and I'm a brazilian Full Stack Developer & Web
+          Hi, my name is Cezar and I'm a brazilian Web Developer & Web
           Designer. Welcome to my personal website!
         </p>
       </CSidebarBrand>
@@ -87,7 +87,7 @@ const TheSidebar = () => {
           className="linkbutton"
         >
           <i className="fab fa-whatsapp mr-2"></i>
-          Hire me
+          Contact Me
         </a>
         <p>© {new Date().getFullYear()} All Rights Reserved</p>
       </div>

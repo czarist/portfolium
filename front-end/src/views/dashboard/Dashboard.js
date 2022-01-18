@@ -53,7 +53,7 @@ class Dashboard extends React.Component {
                   Cezar Trentin
                 </h1>
                 <h4 className="text-muted">
-                  Full Stack Developer, Web Designer & System Analyst
+                  Full Stack Developer
                 </h4>
                 <p className="pr-5">
                   I'm a web developer specialised in frontend and backend
