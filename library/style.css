@@ -1,0 +1,126 @@
+body {
+    background-color: #111821;
+    height: 900px;
+    position: relative;
+}
+
+body .card {
+    background-color: #1e2a3aa6;
+    border-radius: 50px;
+    max-width: 100%;
+    width: 600px;
+}
+
+.card-select {
+    background-color: #1e2a3a;
+    height: auto;
+    padding: 10px;
+    border-top: 5px solid #5bc3d5;
+    margin-top: 7px;
+    min-height: 73px;
+    min-width: 100%;
+    cursor: pointer;
+}
+
+.card-language {
+    background-color: #1e2a3a;
+    display: flex;
+    transition: 0.5s;
+    height: auto;
+    padding: 10px;
+    margin-top: 7px;
+    min-height: 120px;
+    margin-top: 5px;
+    min-width: 100%;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    color: white;
+}
+
+.language-sector {
+    height: 344px;
+}
+
+.card-language:hover {
+    background-color: white;
+    transition: 0.5s;
+    color: #1e2a3a;
+    flex-direction: row-reverse;
+}
+
+.card h1 {
+    background-color: transparent;
+    height: auto;
+    padding: 10px;
+    min-height: 165px;
+    min-width: 100%;
+}
+
+.icons {
+    min-width: 280px;
+}
+
+.card h1::after {
+    content: "|";
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    -webkit-animation: blink 0.7s infinite !important;
+    animation: pisca 0.7s infinite !important;
+    top: 0px !important;
+    position: relative;
+}
+
+@keyframes pisca {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@font-face {
+    font-family: "BAHNSCHRIFT";
+    src: url("../fonts/BAHNSCHRIFT 1.TTF");
+}
+
+#my-particles {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.icons a {
+    background-color: #5bc3d5;
+    padding: 20px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    font-size: 23px;
+    transition: 0.5s;
+}
+
+.icons a:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "BAHNSCHRIFT";
+}
+
+p {
+    font-family: "BAHNSCHRIFT";
+}
