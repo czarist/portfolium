@@ -54,7 +54,7 @@
     "auto-changelog": "~2.2.1",
     "axios": "^0.21.1",
     "dotenv": "^14.2.0",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.0",
     "react-tooltip": "^4.2.21"
   },
   "scripts": {

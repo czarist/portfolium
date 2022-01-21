@@ -6,12 +6,9 @@ class Certifications extends React.Component {
     certifications: [],
     error: null,
   };
-  // Fetch your restaurants immediately after the component is mounted
   componentDidMount = async () => {
-    // Parses the JSON returned by a network request
     const parseJSON = (resp) => (resp.json ? resp.json() : resp);
 
-    // Checks if a network request came back fine, and throws an error if not
     const checkStatus = (resp) => {
       if (resp.status >= 200 && resp.status < 300) {
         return resp;
@@ -41,7 +38,6 @@ class Certifications extends React.Component {
   };
   render() {
     const { error, certifications } = this.state;
-    // Print errors if any
     if (error) {
       return <div>An error occured: {error.message}</div>;
     }
