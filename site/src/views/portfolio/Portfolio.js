@@ -78,12 +78,17 @@ class Portfolio extends React.Component {
                       <h5 className="">{portfolio.description}</h5>
                       <h6 className="mt-4">
                         <i className="fas fa-users mr-1"></i>
-                        <i className="mr-2">Client:</i>
+                        <i className="mr-2">
+                          {this.state.url ? "Cliente:" : "Client:"}
+                        </i>
                         {portfolio.name}
                       </h6>
                       <h6>
                         <i className="fas fa-handshake mr-1"></i>
-                        <i className="mr-2">Intermediary:</i>
+                        <i className="mr-2">
+                          {this.state.url ? "Intermediário" : "Intermediary:"}
+
+                        </i>
                         <a href={portfolio.intermediary_link}>
                           {portfolio.intermediary}
                         </a>
@@ -95,14 +100,16 @@ class Portfolio extends React.Component {
                       </h6>
                       <h6>
                         <i className="fas fa-paint-brush mr-1"></i>
-                        <i className="mr-2">UX & UI Designer:</i>
+                        <i className="mr-2">{'UX & UI Designer:'}</i>
                         <a href={portfolio.designer_link}>
                           {portfolio.designer}
                         </a>
                       </h6>
                       <h6>
                         <i className="fas fa-list-ul mr-1"></i>
-                        <i className="mr-2">Contributions & Technologies:</i>
+                        <i className="mr-2">
+                          {this.state.url ? "Contribuições e Tecnologias:" : "Contributions & Technologies:"}
+                        </i>
                         {portfolio.categories &&
                           portfolio.categories.map((cat) => (
                             <a href="#">

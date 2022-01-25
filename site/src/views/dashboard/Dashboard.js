@@ -7,7 +7,7 @@ class Dashboard extends React.Component {
   state = {
     Tecnologias: [],
     error: null,
-    GlobalConsts,
+    urlApi: GlobalConsts.urlApi,
     path: this.props.location.search,
     resumo_en: "I'm a web developer specialised in web development for institucional websites, blogs, e-commerces and software aplications. Want to know how I may help your project? Check out my",
     resumo_pt: "Sou desenvolvedor web especializado em desenvolvimento web para sites institucionais, blogs, e-commerces e aplicações de software. Quer saber como posso ajudar seu projeto? Confira meu",
@@ -33,7 +33,7 @@ class Dashboard extends React.Component {
     };
 
     try {
-      const Tecnologias = await fetch("http://localhost:1337/Tecnologias", {
+      const Tecnologias = await fetch(`http://localhost:1337/Tecnologias`, {
         method: "GET",
         headers: headers,
       })

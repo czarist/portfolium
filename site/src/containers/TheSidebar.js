@@ -29,7 +29,7 @@ const TheSidebar = () => {
     >
       <CSidebarBrand
         className=" d-flex flex-column justify-content-center align-items-center pb-4 "
-        to="/"
+        to={url ? "/dashboard?pt" : "/dashboard"}
       >
         <h4 className="mt-4 mb-2">Cezar Trentin</h4>
         <img src={"avatars/perfil.png"} alt="Logo" />
