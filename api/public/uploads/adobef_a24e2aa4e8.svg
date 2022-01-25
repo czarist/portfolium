@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31.86" height="31.06" viewBox="0 0 31.86 31.06">
+  <g id="Grupo_17" data-name="Grupo 17" transform="translate(-6.998 -11.998)">
+    <path id="Frame_6_" d="M7,12h31.86v31.06H7Z" transform="translate(0 0)" fill="#ddd100"/>
+    <path id="Background_6_" d="M45.008,51.016H71.8V76.938H45.008Z" transform="translate(-35.507 -36.449)" fill="#514c26"/>
+    <path id="Shadow2_6_" d="M121.345,154.819l-1.712,3.16-3.819-3.16-1.053.263-.527.988L107.979,151h-6.387L101,164.563l9.152,6.716H125.1V158.111Z" transform="translate(-88.808 -130.789)" opacity="0.302"/>
+    <path id="Shadow_7_" d="M45.008,51H71.8v.922H45.008Z" transform="translate(-35.507 -36.435)" opacity="0.302"/>
+    <g id="Fw" transform="translate(12.717 20.671)">
+      <path id="Caminho_74" data-name="Caminho 74" d="M101.386,150.79h6.993v2.031H103.6v3.74h4.458v2.031H103.6v5.751h-2.211Z" transform="translate(-101.386 -150.79)" fill="#ddd100"/>
+      <path id="Caminho_75" data-name="Caminho 75" d="M216.137,207.9l.917,4.444c.2,1.046.4,2.111.557,3.177h.036c.18-1.066.467-2.152.719-3.157L219.5,207.9h1.8l1.1,4.344c.27,1.146.5,2.212.7,3.278h.036c.144-1.066.342-2.132.575-3.278l.971-4.344h2.175L224.1,217.7h-2.049l-1.043-3.982c-.27-1.026-.467-1.951-.665-3.137h-.036a28.4,28.4,0,0,1-.665,3.137l-1.115,3.982h-2.067l-2.589-9.793h2.265Z" transform="translate(-206.466 -204.143)" fill="#ddd100"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" width="31.86" height="31.06" viewBox="0 0 31.86 31.06">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.329" cy="0.224" r="0.781" gradientTransform="translate(-0.01 0.01) scale(0.973 0.968)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#423325" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#1c0a00"/>
+    </radialGradient>
+  </defs>
+  <g id="Grupo_15" data-name="Grupo 15" transform="translate(0 -130.746)">
+    <path id="Caminho_70" data-name="Caminho 70" d="M24.8,155.549H53.981v28.378H24.8Z" transform="translate(-23.462 -23.462)" fill="url(#radial-gradient)"/>
+    <path id="Caminho_71" data-name="Caminho 71" d="M1.327,132.073H30.533v28.405H1.327ZM0,161.806H31.86v-31.06H0Zm20.868-19.99c0-.106.04-.159.159-.159h2.084c.106,0,.159.04.159.159v10.473c0,.106-.027.159-.159.159H21.054c-.133,0-.173-.066-.173-.173v-10.46Zm-.146-3.013a1.354,1.354,0,0,1,2.708,0,1.269,1.269,0,0,1-1.381,1.354A1.248,1.248,0,0,1,20.722,138.8Zm-5.974,7.38c-.372-1.473-1.248-4.686-1.58-6.239h-.027c-.279,1.553-.982,4.181-1.54,6.239Zm-3.69,2.15-1.049,3.982c-.027.106-.066.133-.2.133H7.859c-.133,0-.159-.04-.133-.2l3.77-13.194a4.3,4.3,0,0,0,.133-1.1c0-.093.04-.133.106-.133h2.788c.093,0,.133.027.159.133L18.9,152.276c.027.106,0,.173-.106.173h-2.2c-.106,0-.173-.027-.2-.119l-1.089-4H11.058Z" fill="#ff7f18"/>
+  </g>
+</svg>
