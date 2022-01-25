@@ -1,38 +1,39 @@
 
+let url = window.location.hash.includes("?pt");
 
 const _nav = [
   {
     _tag: "CSidebarNavItem",
-    name: "About Me",
-    to: "/dashboard",
+    name: url ? "Sobre mim" : "About Me",
+    to: url ? "/dashboard?pt" : "/dashboard",
     icon: "cil-user",
   },
 
   {
     _tag: "CSidebarNavItem",
     name: "Portfolio",
-    to: "/Portfolio",
+    to: url ? "/Portfolio?pt" : "/Portfolio",
     icon: "cil-code",
     className: "kek",
   },
   {
     _tag: "CSidebarNavItem",
-    name: "Resume",
-    to: "/resume",
+    name: url ? "Curriculo" : "Resume",
+    to: url ? "/resume?pt" : "/resume",
     icon: "cil-notes",
   },
 
   {
     _tag: "CSidebarNavItem",
-    name: "Certifications",
-    to: "/Certifications",
+    name: url ? "Certificados" : "Certifications",
+    to: url ? "/Certifications?pt" : "/Certifications",
     icon: "cil-list-rich",
   },
 
   {
     _tag: "CSidebarNavItem",
-    name: "Contact",
-    to: "/contact",
+    name: url ? "Contato" : "Contact",
+    to: url ? "/contact?pt" : "/contact",
     icon: "cil-envelope-closed",
   },
   {

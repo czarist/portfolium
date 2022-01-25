@@ -1,5 +1,6 @@
 import React, { Profiler } from "react";
 import { CCard, CCardBody, CCardGroup, CCardHeader } from "@coreui/react";
+import GlobalConsts from "../../GlobalConsts"
 
 class Certifications extends React.Component {
   state = {

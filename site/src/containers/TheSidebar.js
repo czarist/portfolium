@@ -11,13 +11,16 @@ import {
   CSidebarNavDropdown,
   CSidebarNavItem,
 } from "@coreui/react";
-
 // sidebar nav config
 import navigation from "./_nav";
 
 const TheSidebar = () => {
+
+  let url = window.location.hash.includes("?pt");
   const dispatch = useDispatch();
   const show = useSelector((state) => state.sidebarShow);
+  const apresentacao_en = " Hi, my name is Cezar and I'm a brazilian Web Developer & Web Designer. Welcome to my personal website!";
+  const apresentacao_pt = "Olá, meu nome é Cezar e sou um desenvolvedor web e web designer. Bem vindo ao meu site pessoal!  ";
 
   return (
     <CSidebar
@@ -31,8 +34,7 @@ const TheSidebar = () => {
         <h4 className="mt-4 mb-2">Cezar Trentin</h4>
         <img src={"avatars/perfil.png"} alt="Logo" />
         <p className="mt-2 mb-2 text-center text-white pl-2 pr-2">
-          Hi, my name is Cezar and I'm a brazilian Web Developer & Web
-          Designer. Welcome to my personal website!
+          {url ? apresentacao_pt : apresentacao_en}
         </p>
       </CSidebarBrand>
       <div className="container d-flex align-items-center justify-content-center">
@@ -44,7 +46,10 @@ const TheSidebar = () => {
           >
             <i className="fab fa-linkedin-in"></i>
           </a>
-          <a rel="noreferrer" href="https://github.com/czarist/">
+          <a
+            rel="noreferrer"
+            href="https://github.com/czarist/"
+            target="_blank">
             <i className="fab fa-github-alt"></i>
           </a>
           <a
@@ -54,7 +59,10 @@ const TheSidebar = () => {
           >
             <i className="fab fa-stack-overflow"></i>
           </a>
-          <a rel="noreferrer" target="_blank" href="https://codepen.io/czarist">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://codepen.io/czarist">
             <i className="fab fa-codepen"></i>
           </a>
           <a
@@ -87,9 +95,9 @@ const TheSidebar = () => {
           className="linkbutton"
         >
           <i className="fab fa-whatsapp mr-2"></i>
-          Contact Me
+          {url ? "Faça contato" : "Contact me"}
         </a>
-        <p>© {new Date().getFullYear()} All Rights Reserved</p>
+        <p>© {new Date().getFullYear()} {url ? "Todos os Direitos Reservados" : "All Rights Reserved"} </p>
       </div>
       <CSidebarMinimizer className="c-d-md-down-none" />
     </CSidebar>

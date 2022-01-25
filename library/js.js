@@ -1,11 +1,11 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
 
 
     let cardSelect = document.getElementById('card-select');
     let languageContent = document.getElementById('language-content');
     let seta = document.getElementById('seta');
 
-    cardSelect.addEventListener("click", function(e) {
+    cardSelect.addEventListener("click", function (e) {
         if (languageContent.classList.contains('d-none')) {
             languageContent.classList.remove('d-none')
             seta.classList.remove('bi-caret-down-fill')
@@ -31,7 +31,7 @@ window.addEventListener('load', function() {
 
     function escrever(str, done) {
         var char = str.split('').reverse();
-        var typer = setInterval(function() {
+        var typer = setInterval(function () {
             if (!char.length) {
                 clearInterval(typer);
                 return setTimeout(done, 200); // só para esperar um bocadinho
@@ -44,7 +44,7 @@ window.addEventListener('load', function() {
     function limpar(done) {
         var char = div.innerHTML;
         var nr = char.length;
-        var typer = setInterval(function() {
+        var typer = setInterval(function () {
             if (nr-- == 0) {
                 clearInterval(typer);
                 return done();
@@ -60,7 +60,7 @@ window.addEventListener('load', function() {
             if (atual < conteudos.length - 1) atual++;
             else atual = 0;
             var str = conteudos[atual];
-            escrever(str, function() {
+            escrever(str, function () {
                 limpar(prox);
             });
         }
@@ -133,7 +133,7 @@ window.addEventListener('load', function() {
     stats.domElement.style.top = '0px';
     document.body.appendChild(stats.domElement);
     count_particles = document.querySelector('.js-count-particles');
-    update = function() {
+    update = function () {
         stats.begin();
         stats.end();
         if (

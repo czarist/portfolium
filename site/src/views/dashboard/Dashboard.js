@@ -1,14 +1,23 @@
 import React from "react";
 import { CCard, CCardBody, CCol, CRow } from "@coreui/react";
 import ReactTooltip from "react-tooltip";
+import GlobalConsts from "../../GlobalConsts"
 
 class Dashboard extends React.Component {
   state = {
     Tecnologias: [],
     error: null,
+    GlobalConsts,
+    path: this.props.location.search,
+    resumo_en: "I'm a web developer specialised in web development for institucional websites, blogs, e-commerces and software aplications. Want to know how I may help your project? Check out my",
+    resumo_pt: "Sou desenvolvedor web especializado em desenvolvimento web para sites institucionais, blogs, e-commerces e aplicações de software. Quer saber como posso ajudar seu projeto? Confira meu",
+    resumo_2_en: `I have more than ${new Date().getFullYear() - 2018} years' experience with web development. Below is a quick overview of my main technical skill sets and technologies I use. Want to find o ut more about my experience? Check out my `,
+    resumo_2_pt: `Tenho mais de ${new Date().getFullYear() - 2018} anos de experiência com desenvolvimento web. Abaixo está uma rápida visão geral dos meus principais conjuntos de habilidades técnicas e tecnologias que uso. Quer saber mais sobre minha experiência? Confira meu `
   };
 
   componentDidMount = async () => {
+    console.log(this.props.location.search)
+
     const parseJSON = (resp) => (resp.json ? resp.json() : resp);
 
     const checkStatus = (resp) => {
@@ -56,27 +65,29 @@ class Dashboard extends React.Component {
                   Full Stack Developer
                 </h4>
                 <p className="pr-5">
-                  I'm a web developer specialised in frontend and backend
-                  development for institucional websites, blogs, e-commerces and
-                  software aplications. Want to know how I may help your
-                  project? Check out my{" "}
-                  <a className="extra-link" href="/#/Portfolio">
-                    project portfolio
-                  </a>{" "}
-                  and{" "}
-                  <a className="extra-link" href="/#/resume">
-                    online resume
-                  </a>{" "}
-                  .{" "}
+                  {this.props.location.search == "?pt" ? this.state.resumo_pt + " " : this.state.resumo_en + " "}
+
+                  <a className="extra-link" href={this.props.location.search == "?pt" ? "#/Portfolio?pt" : "#/Portfolio"}>
+                    {this.props.location.search == "?pt" ? "portfolio " : "project portfolio "}
+                  </a>
+                  {this.props.location.search == "?pt" ? "e " : "and "}
+
+                  <a className="extra-link" href={this.props.location.search == "?pt" ? "#/resume?pt" : "#/resume"}>
+                    {this.props.location.search == "?pt" ? "curriculo " : "online resume "}
+                  </a>
+                  .
                 </p>
                 <div className="d-flex align-items-center justify-content-start mb-5">
-                  <a className="internal-link mr-4" href="/#/Portfolio">
+                  <a className="internal-link mr-4" href={this.props.location.search == "?pt" ? "#/Portfolio?pt" : "#/Portfolio"}>
                     <i className="fas fa-laptop-code mr-2"></i>
-                    View Portfolio
+                    {this.props.location.search == "?pt" ? "Ver Portfólio" : "View Portfolio"}
+
                   </a>
-                  <a className="internal-link mr-4" href="/#/resume">
+                  <a className="internal-link mr-4" href={this.props.location.search == "?pt" ? "#/resume?pt" : "#/resume"}>
                     <i className="fas fa-file-alt mr-2"></i>
-                    View Resume
+                    {this.props.location.search == "?pt" ? "Ver Curriculo" : "View Resume"}
+
+
                   </a>
                 </div>
               </CCol>
@@ -97,19 +108,22 @@ class Dashboard extends React.Component {
           <CCardBody className="bg-transparent">
             <CRow className="box-contents" sm="12">
               <CCol sm="12">
-                <h1 className="blue-after">What I do</h1>
+                <h1 className="blue-after">
+                  {this.props.location.search == "?pt" ? "O que faço" : "What I do"}
+                </h1>
+
                 <p className="w-75">
-                  I have more than {new Date().getFullYear() - 2018} years'
-                  experience with web development. Below is a quick overview of
-                  my main technical skill sets and technologies I use. Want to
-                  find o ut more about my experience? Check out my{" "}
-                  <a href="/#/Resume" className="extra-link">
-                    {" "}
-                    online resume
-                  </a>{" "}
-                  and{" "}
-                  <a href="/#/Portfolio" className="extra-link">
-                    project portfolio
+         
+                {this.props.location.search == "?pt" ? this.state.resumo_2_pt : this.state.resumo_2_en}
+
+
+                  <a className="extra-link" href={this.props.location.search == "?pt" ? "#/Portfolio?pt" : "#/Portfolio"}>
+                    {this.props.location.search == "?pt" ? "portfolio " : "project portfolio "}
+                  </a>
+                  {this.props.location.search == "?pt" ? "e " : "and "}
+
+                  <a className="extra-link" href={this.props.location.search == "?pt" ? "#/resume?pt" : "#/resume"}>
+                    {this.props.location.search == "?pt" ? "curriculo " : "online resume "}
                   </a>
                   .
                 </p>
