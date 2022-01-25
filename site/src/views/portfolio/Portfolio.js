@@ -5,13 +5,13 @@ class Portfolio extends React.Component {
   state = {
     portfolios: [],
     error: null,
+    apresentacao_en: "Welcome to my online portfolio. I'm taking on freelance work at the moment. Want some help building your project?",
+    apresentacao_pt: "Bem-vindo ao meu portfólio on-line. Estou aceitando trabalhos freelances no momento. Quer ajuda para construir seu projeto?",
+    url: this.props.location.search == "?pt"
   };
-  // Fetch your restaurants immediately after the component is mounted
   componentDidMount = async () => {
-    // Parses the JSON returned by a network request
     const parseJSON = (resp) => (resp.json ? resp.json() : resp);
 
-    // Checks if a network request came back fine, and throws an error if not
     const checkStatus = (resp) => {
       if (resp.status >= 200 && resp.status < 300) {
         return resp;
@@ -38,7 +38,6 @@ class Portfolio extends React.Component {
   };
   render() {
     const { error, portfolios } = this.state;
-    // Print errors if any
     if (error) {
       return <div>An error occured: {error.message}</div>;
     }
@@ -48,8 +47,7 @@ class Portfolio extends React.Component {
           <CCardBody>
             <h1 className="text-center">PORTFOLIO</h1>
             <p className="text-center h4">
-              Welcome to my online portfolio. I'm taking on freelance work at
-              the moment. Want some help building your project?
+              {this.state.url ? this.state.apresentacao_pt : this.state.apresentacao_en}
             </p>
           </CCardBody>
         </CCard>

@@ -113,8 +113,8 @@ class Dashboard extends React.Component {
                 </h1>
 
                 <p className="w-75">
-         
-                {this.props.location.search == "?pt" ? this.state.resumo_2_pt : this.state.resumo_2_en}
+
+                  {this.props.location.search == "?pt" ? this.state.resumo_2_pt : this.state.resumo_2_en}
 
 
                   <a className="extra-link" href={this.props.location.search == "?pt" ? "#/Portfolio?pt" : "#/Portfolio"}>
@@ -148,7 +148,7 @@ class Dashboard extends React.Component {
                           src={"http://localhost:1337" + tec2.url}
                           data-tip
                           data-for={tec2.hash}
-                          alt="{tec2.caption}"
+                          alt={tec2.caption}
                         />
                       </div>
                     ))}
